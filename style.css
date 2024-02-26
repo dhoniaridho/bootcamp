@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+.box-merah {
+  background-color: red;
+  width: 200px;
+  height: 200px;
+  margin-top: 10px;
+  border: solid 10px blue;
+}
+
+#css-2 {
+  color: blue;
+}
+
+.text-white {
+  color: white;
+}
+
+.parent > .child {
+  background-color: blue;
+}
+
+div p {
+  background-color: blue;
+}

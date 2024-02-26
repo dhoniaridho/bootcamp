@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form action="./action.html" method="get">
+      <div>
+        <label for="name">Nama lengkap</label>
+        <input id="name" type="text" name="name" />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" value="@gmail.com" />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" value="" />
+      </div>
+      <div>
+        <label for="gender">Gender</label>
+        <select name="gender" id="gender">
+          <option value="male">Laki-laki</option>
+          <option value="female">Perempuan</option>
+        </select>
+      </div>
+      <div>
+        <label for="address"> Alamat </label>
+        <textarea name="address" id="address" cols="30" rows="10">
+isinya</textarea
+        >
+      </div>
+      <div>
+        <label>Input Radio</label>
+        <div>
+          <label for="radio-1">Radio 1</label>
+          <input name="radio" id="radio-1" type="radio" value="Radio 1" />
+        </div>
+        <div>
+          <label for="radio-2">Radio 2</label>
+          <input name="radio" id="radio-2" type="radio" value="Radio 2" />
+        </div>
+      </div>
+      <div>
+        <label for="image"> Photo </label>
+        <input id="image" type="file" />
+      </div>
+      <p title="This title">title</p>
+      <div>
+        <button type="submit">simpan</button>
+        <button type="reset">reset</button>
+      </div>
+    </form>
+  </body>
+</html>

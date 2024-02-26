@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Layout</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        display: flex;
+      }
+      body > div {
+        flex-grow: 1;
+      }
+      .sidebar {
+        background-color: aqua;
+        height: 100vh;
+      }
+      .navbar {
+        background-color: red;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        height: 50px;
+      }
+      .navbar > ul {
+        display: flex;
+        list-style: none;
+      }
+      .navbar > ul > li {
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <aside class="sidebar">sidebar</aside>
+    <div>
+      <nav class="navbar">
+        <ul>
+          <li>Home</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+      <main style="overflow: auto; height: calc( 100vh - 50px)">
+        <section style="height: 100vh">Content</section>
+        <section style="height: 100vh">Content</section>
+        <section style="height: 100vh">Content</section>
+      </main>
+    </div>
+    <footer></footer>
+  </body>
+</html>

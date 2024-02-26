@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Position</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+      }
+      .box-1 {
+        position: fixed;
+        top: 10px;
+        /* left: 100px; */
+        right: 100px;
+      }
+
+      .button {
+        padding: 10px 20px;
+        background-color: #1392fa;
+        outline: none;
+        border: 0;
+      }
+
+      .button:hover {
+        background-color: #1074c5;
+        border-radius: 40px;
+      }
+
+      .button:active {
+        background-color: #74b8f0;
+      }
+
+      .box-2 {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        box-shadow: #0000003a 100px 50px 100px;
+        border-radius: 50px;
+      }
+
+      .box-2 > .container {
+        width: 100%;
+        height: 100%;
+        margin-top: 100px;
+        position: relative;
+        background-color: aqua;
+        overflow: hidden;
+        border-radius: 50px;
+      }
+      .box-2 > .container > img {
+        width: 100%;
+      }
+
+      .box-2 > .child {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: #1392fa;
+        border: 10px solid #000;
+        color: aliceblue;
+        font-size: 50px;
+        /* bottom: -5; */
+        right: -50px;
+        top: -50px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .navbar {
+        position: sticky;
+        top: 0;
+        left: 0;
+        height: 50px;
+        background-color: #f0f;
+        display: flex;
+        align-items: center;
+        z-index: 10;
+      }
+
+      .navbar > .container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .navbar-nav {
+        display: none;
+      }
+
+      .navbar-nav > li:hover {
+        color: #1392fa;
+      }
+      .banner {
+        width: 100%;
+        height: 400px;
+        background: url("https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg")
+          no-repeat center;
+        text-align: center;
+      }
+      .banner > div {
+        width: 50%;
+        height: 40px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .logo {
+        font-weight: 900;
+        font-family: "Roboto", sans-serif;
+      }
+
+      @media screen and (min-width: 480px) {
+        .navbar-nav {
+          display: flex;
+          gap: 20px;
+        }
+        .menu-icon {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body style="position: relative">
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">Logo</div>
+        <div>
+          <button class="menu-icon">
+            <svg width="1em" height="1em">
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M0 3.75A.75.75 0 0 1 .75 3h14.5a.75.75 0 0 1 0 1.5H.75A.75.75 0 0 1 0 3.75M0 8a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H.75A.75.75 0 0 1 0 8m.75 3.5a.75.75 0 0 0 0 1.5h14.5a.75.75 0 0 0 0-1.5z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <ul class="navbar-nav">
+            <li>home</li>
+            <li>about</li>
+            <li>project</li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main style="width: 100%">
+      <div class="banner">
+        <div>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
+          pariatur esse explicabo! Impedit adipisci veritatis voluptates nulla,
+          est eum consequuntur perferendis commodi? Nihil praesentium dolores
+          voluptatibus nulla quam culpa accusamus.
+        </div>
+        <button class="button">get started</button>
+      </div>
+      <!-- <div class="box-1">Box 1</div> -->
+      <div class="box-2">
+        <div class="container">
+          <img src="https://i.pravatar.cc/300?u=a042581f4e29026709d" alt="" />
+        </div>
+        <div class="child">5</div>
+      </div>
+      <div class="box-2">
+        <div class="container">
+          <img src="https://i.pravatar.cc/300?u=a042581f4e29026709d" alt="" />
+        </div>
+        <div class="child">5</div>
+      </div>
+      <div class="box-2">
+        <div class="container">
+          <img src="https://i.pravatar.cc/300?u=a042581f4e29026709d" alt="" />
+        </div>
+        <div class="child">5</div>
+      </div>
+      <div class="box-2">
+        <div class="container">
+          <img src="https://i.pravatar.cc/300?u=a042581f4e29026709d" alt="" />
+        </div>
+        <div class="child">5</div>
+      </div>
+      <div class="box-2">
+        <div class="container">
+          <img src="https://i.pravatar.cc/300?u=a042581f4e29026709d" alt="" />
+        </div>
+        <div class="child">5</div>
+      </div>
+      <div class="box-2">
+        <div class="container">
+          <img src="https://i.pravatar.cc/300?u=a042581f4e29026709d" alt="" />
+        </div>
+        <div class="child">5</div>
+      </div>
+    </main>
+  </body>
+</html>

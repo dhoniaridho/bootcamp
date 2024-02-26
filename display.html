@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Display</title>
+    <style>
+      .sembunyikan {
+        display: none;
+      }
+      .block > section {
+        display: block;
+        background-color: red;
+      }
+      .inline > section {
+        display: inline;
+        background-color: red;
+      }
+      .flex {
+        height: 100vh;
+        background-color: aliceblue;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sembunyikan">Hidden</div>
+    <div class="block">
+      <section>1</section>
+      <section>1</section>
+      <section>1</section>
+      <section>1</section>
+    </div>
+    <br>
+    <div class="inline">
+      <section>1</section>
+      <section>1</section>
+      <section>Success</section>
+      <section>1</section>
+    </div>
+    <div class="flex">
+        <section>
+            This is Flex
+        </section>
+        
+        <section>
+            This is Flex
+        </section>
+    </div>
+  </body>
+</html>

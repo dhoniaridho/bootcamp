@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Viewport</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        height: 100vh;
+        width: 100%;
+        background-color: red;
+        display: flex;
+      }
+      .box > div:nth-child(1) {
+        width: 100px;
+        height: 400px;
+        background-color: black;
+        flex-shrink: 2;
+      }
+      .box > div:nth-child(2) {
+        flex-shrink: 1;
+        height: 400px;
+        width: 100%;
+        background-color: aqua;
+      }
+
+      #content {
+        display: flex;
+        width: 500px;
+      }
+
+      #content div {
+        flex-basis: 100px;
+        border: 3px solid rgb(0 0 0 / 20%);
+      }
+
+      .box {
+        flex-shrink: 1;
+      }
+
+      .box1 {
+        flex-shrink: 5;
+      }
+    </style>
+  </head>
+  <body class="box">
+    <p>
+      The width of content is 500px; the flex-basis of the flex items is 120px.
+    </p>
+    <p>A, B, C have flex-shrink:1 set. D and E have flex-shrink:2 set</p>
+    <p>The width of D and E is less than the others.</p>
+    <div id="content">
+      <div class="box" style="background-color: red">A</div>
+      <div class="box" style="background-color: lightblue">B</div>
+      <div class="box" style="background-color: yellow">C</div>
+      <div class="box1" style="background-color: brown">D</div>
+      <div class="box1" style="background-color: lightgreen">E</div>
+    </div>
+  </body>
+</html>
