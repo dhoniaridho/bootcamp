@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Operator</title>
+    <style>
+        #fullName {
+            width: 100%;
+            height: 300px;
+            background-color: aliceblue;
+        }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div id="fullName"></div>
+      <div>
+        <input id="firstName" type="text" name="first-name" />
+        <input id="lastName" type="text" name="last-name" />
+        <button id="submit">Submit</button>
+      </div>
+    </div>
+    <script>
+      //   const a = 10;
+
+      //   document.write(a % 2 == 0 ? "genap" : "ganjil");
+
+      let x = 10;
+
+      //   x = x + 1;
+      //   x++;
+      x = x + 10;
+      x += 10;
+      console.log(x);
+
+      x = x - 10;
+      x -= 10;
+
+      let firstName = "John";
+      let lastName = "Doe";
+      const qs = document.querySelector("fullName");
+      console.log(qs);
+      const fullNameElement = document.getElementById("fullName");
+      const btn = document.getElementById("submit");
+      btn.addEventListener("click", function () {
+        firstName = document.getElementById("firstName").value;
+        lastName = document.getElementById("lastName").value;
+        fullNameElement.innerText = firstName + " " + lastName;
+      });
+    </script>
+  </body>
+</html>
