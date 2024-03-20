@@ -5,6 +5,7 @@
     "esModuleInterop": true,
     "strict": true,
     "outDir": "dist",
-    "removeComments": true
+    "removeComments": true,
+    "allowUmdGlobalAccess": false
   }
 }
