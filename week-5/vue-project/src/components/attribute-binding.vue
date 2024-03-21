@@ -9,6 +9,7 @@ const value = 2
 </script>
 
 <template>
+  {{ id == 'ini-id' ? 'id': 'bukan' }}
   <div v-bind:id="id">id</div>
   <div :class="className">red</div>
   <div :class="id == 'ini-id' ? 'red' : 'bold'">red bold</div>
